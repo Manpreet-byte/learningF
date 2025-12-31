@@ -1,0 +1,95 @@
+.code-editor-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border-bottom: none;
+  padding: 6px 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.editor-tabs {
+  display: flex;
+  gap: 2px;
+  overflow: visible;
+  align-items: center;
+}
+
+.tab {
+  padding: 6px 10px;
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.2s;
+  white-space: nowrap;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab:hover {
+  color: #333;
+  background: #d0d0d0;
+}
+
+.tab.active {
+  color: #007bff;
+  border-color: #007bff;
+  background: #fff;
+}
+
+.run-btn {
+  padding: 6px 10px;
+  margin: 0;
+  background: linear-gradient(135deg, #4F46E5 0%, #3B31C6 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.run-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+
+.run-btn:active {
+  transform: translateY(0);
+}
+
+.editor-container {
+  flex: 1;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 32px;
+}
+
+.monaco-editor {
+  background: #fff !important;
+}
+
+.monaco-editor .lines-content {
+  padding-top: 8px;
+}

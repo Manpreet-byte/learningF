@@ -1,0 +1,1103 @@
+[
+  {
+    "id": "lesson-1",
+    "title": "Your First HTML Page",
+    "description": "Learn the basics of HTML structure",
+    "difficulty": "beginner",
+    "instructions": "Create a simple webpage with a heading and paragraph. Use <h1> for the heading and <p> for the paragraph.",
+    "tags": [
+      "html",
+      "basics"
+    ],
+    "starterCode": {
+      "html": "<h1>Welcome!</h1>\n<p>Edit me to create your first webpage.</p>",
+      "css": "body { font-family: Arial; color: #333; }",
+      "javascript": "console.log('Hello from JavaScript!');"
+    },
+    "tasks": [
+      {
+        "type": "tag-exists",
+        "target": "h1",
+        "description": "Add an <h1> heading tag"
+      },
+      {
+        "type": "tag-exists",
+        "target": "p",
+        "description": "Add a <p> paragraph tag"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-2",
+    "title": "HTML Forms & Input",
+    "description": "Create interactive forms with input fields",
+    "difficulty": "beginner",
+    "instructions": "Build a form with text input, email, and submit button. Use proper HTML5 input types.",
+    "tags": [
+      "html",
+      "forms"
+    ],
+    "starterCode": {
+      "html": "<form id=\"myForm\">\n  <label>Name:</label>\n  <input type=\"text\" id=\"name\" required>\n  <label>Email:</label>\n  <input type=\"email\" id=\"email\" required>\n  <button type=\"submit\">Submit</button>\n</form>\n<div id=\"output\"></div>",
+      "css": "form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }\nlabel { font-weight: bold; }\ninput { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }",
+      "javascript": "document.getElementById('myForm').addEventListener('submit', (e) => {\n  e.preventDefault();\n  const name = document.getElementById('name').value;\n  document.getElementById('output').textContent = `Hello, ${name}!`;\n});"
+    },
+    "tasks": [
+      {
+        "type": "tag-exists",
+        "target": "form",
+        "description": "Create a <form> element"
+      },
+      {
+        "type": "html-contains",
+        "target": "type=email",
+        "description": "Add an email input field"
+      },
+      {
+        "type": "html-contains",
+        "target": "type=text",
+        "description": "Add a text input field"
+      },
+      {
+        "type": "js-contains",
+        "target": "addEventListener",
+        "description": "Add event listener in JavaScript"
+      }
+    ]
+  },
+  {
+    "id": "lesson-3",
+    "title": "HTML Lists & Tables",
+    "description": "Organize data with lists and tables",
+    "difficulty": "beginner",
+    "instructions": "Create an ordered list and a simple table with headers and data rows.",
+    "tags": [
+      "html",
+      "structure"
+    ],
+    "starterCode": {
+      "html": "<h2>Shopping List</h2>\n<ol>\n  <li>Apples</li>\n  <li>Bananas</li>\n  <li>Oranges</li>\n</ol>\n\n<h2>Price Table</h2>\n<table>\n  <thead>\n    <tr><th>Item</th><th>Price</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Apple</td><td>$1.00</td></tr>\n    <tr><td>Banana</td><td>$0.50</td></tr>\n  </tbody>\n</table>",
+      "css": "table { border-collapse: collapse; width: 100%; margin-top: 20px; }\nth, td { border: 1px solid #ddd; padding: 10px; text-align: left; }\nth { background-color: #4CAF50; color: white; }",
+      "javascript": "console.log('Tables and lists created!');"
+    },
+    "tasks": [
+      {
+        "type": "tag-exists",
+        "target": "ol",
+        "description": "Create an ordered list"
+      },
+      {
+        "type": "tag-exists",
+        "target": "table",
+        "description": "Create a table element"
+      },
+      {
+        "type": "tag-exists",
+        "target": "thead",
+        "description": "Add table header section"
+      },
+      {
+        "type": "tag-exists",
+        "target": "tbody",
+        "description": "Add table body section"
+      }
+    ]
+  },
+  {
+    "id": "lesson-4",
+    "title": "CSS Box Model",
+    "description": "Understand padding, margin, and borders",
+    "difficulty": "beginner",
+    "instructions": "Style boxes with different padding, margin, and border values to see how they affect layout.",
+    "tags": [
+      "css",
+      "box-model"
+    ],
+    "starterCode": {
+      "html": "<div class=\"box box1\">Box 1</div>\n<div class=\"box box2\">Box 2</div>\n<div class=\"box box3\">Box 3</div>",
+      "css": ".box { background: #3498db; color: white; width: 200px; }\n.box1 { padding: 10px; margin: 10px; border: 2px solid red; }\n.box2 { padding: 20px; margin: 20px; border: 4px dashed green; }\n.box3 { padding: 30px; margin: 10px 20px; border: 6px double blue; }",
+      "javascript": "console.log('Box model demonstration');"
+    },
+    "tasks": [
+      {
+        "type": "class-exists",
+        "target": "box",
+        "description": "Create .box class style"
+      },
+      {
+        "type": "css-contains",
+        "target": "padding",
+        "description": "Add padding property"
+      },
+      {
+        "type": "css-contains",
+        "target": "margin",
+        "description": "Add margin property"
+      },
+      {
+        "type": "css-contains",
+        "target": "border",
+        "description": "Add border property"
+      }
+    ]
+  },
+  {
+    "id": "lesson-5",
+    "title": "CSS Selectors & Specificity",
+    "description": "Master CSS selectors and cascading rules",
+    "difficulty": "beginner",
+    "instructions": "Use different selectors: class, id, attribute, and pseudo-classes to style elements.",
+    "tags": [
+      "css",
+      "selectors"
+    ],
+    "starterCode": {
+      "html": "<p class=\"text\">Regular paragraph</p>\n<p id=\"special\">Special paragraph</p>\n<a href=\"#\">Hover over me</a>\n<ul>\n  <li>First item</li>\n  <li>Second item</li>\n  <li>Third item</li>\n</ul>",
+      "css": ".text { color: blue; }\n#special { color: red; font-weight: bold; }\na:hover { color: green; text-decoration: none; }\nli:first-child { background: yellow; }\nli:nth-child(2) { background: lightblue; }",
+      "javascript": "console.log('CSS selectors in action!');"
+    },
+    "tasks": [
+      {
+        "type": "css-contains",
+        "target": ".text",
+        "description": "Use class selector"
+      },
+      {
+        "type": "css-contains",
+        "target": "#special",
+        "description": "Use ID selector"
+      },
+      {
+        "type": "css-contains",
+        "target": ":hover",
+        "description": "Use pseudo-class selector"
+      },
+      {
+        "type": "css-contains",
+        "target": ":nth-child",
+        "description": "Use nth-child selector"
+      }
+    ]
+  },
+  {
+    "id": "lesson-6",
+    "title": "Flexbox Basics",
+    "description": "Learn CSS Flexbox for responsive layouts",
+    "difficulty": "intermediate",
+    "instructions": "Create a flexible layout using flex-direction, justify-content, and align-items.",
+    "tags": [
+      "css",
+      "layout",
+      "flexbox"
+    ],
+    "starterCode": {
+      "html": "<div class=\"container\">\n  <div class=\"box\">1</div>\n  <div class=\"box\">2</div>\n  <div class=\"box\">3</div>\n</div>",
+      "css": ".container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  height: 200px;\n  background: #f0f0f0;\n  padding: 20px;\n}\n.box {\n  background: #3498db;\n  color: white;\n  padding: 20px;\n  font-size: 24px;\n}",
+      "javascript": "console.log('Flexbox layout!');"
+    },
+    "tasks": [
+      {
+        "type": "css-contains",
+        "target": "display: flex",
+        "description": "Set display to flex"
+      },
+      {
+        "type": "css-contains",
+        "target": "justify-content",
+        "description": "Use justify-content property"
+      },
+      {
+        "type": "css-contains",
+        "target": "align-items",
+        "description": "Use align-items property"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-7",
+    "title": "CSS Grid Layout",
+    "description": "Build complex layouts with CSS Grid",
+    "difficulty": "intermediate",
+    "instructions": "Create a grid layout with rows and columns. Use grid-template-columns and gap.",
+    "tags": [
+      "css",
+      "layout",
+      "grid"
+    ],
+    "starterCode": {
+      "html": "<div class=\"grid\">\n  <div class=\"item\">Header</div>\n  <div class=\"item\">Sidebar</div>\n  <div class=\"item\">Main</div>\n  <div class=\"item\">Footer</div>\n</div>",
+      "css": ".grid {\n  display: grid;\n  grid-template-columns: 1fr 3fr;\n  grid-template-rows: auto 1fr auto;\n  gap: 10px;\n  height: 400px;\n}\n.item { background: #e74c3c; color: white; padding: 20px; }\n.item:nth-child(1) { grid-column: 1 / -1; }",
+      "javascript": "console.log('Grid layout!');"
+    },
+    "tasks": [
+      {
+        "type": "css-contains",
+        "target": "display: grid",
+        "description": "Set display to grid"
+      },
+      {
+        "type": "css-contains",
+        "target": "grid-template-columns",
+        "description": "Define grid columns"
+      },
+      {
+        "type": "css-contains",
+        "target": "gap",
+        "description": "Add gap property"
+      },
+      {
+        "type": "tag-exists",
+        "target": "div",
+        "description": "Create grid items"
+      }
+    ]
+  },
+  {
+    "id": "lesson-8",
+    "title": "CSS Animations",
+    "description": "Animate elements with CSS transitions and keyframes",
+    "difficulty": "intermediate",
+    "instructions": "Create smooth animations using @keyframes and transition properties.",
+    "tags": [
+      "css",
+      "animations"
+    ],
+    "starterCode": {
+      "html": "<div class=\"box animated\">Watch me move!</div>\n<button class=\"hover-btn\">Hover me</button>",
+      "css": "@keyframes slide {\n  from { transform: translateX(0); }\n  to { transform: translateX(200px); }\n}\n.animated {\n  animation: slide 2s infinite alternate;\n  background: #9b59b6;\n  color: white;\n  padding: 20px;\n}\n.hover-btn {\n  transition: all 0.3s;\n  margin-top: 20px;\n}\n.hover-btn:hover {\n  transform: scale(1.2);\n  background: #2ecc71;\n}",
+      "javascript": "console.log('CSS animations!');"
+    },
+    "tasks": [
+      {
+        "type": "css-contains",
+        "target": "@keyframes",
+        "description": "Create keyframes animation"
+      },
+      {
+        "type": "css-contains",
+        "target": "animation",
+        "description": "Apply animation to element"
+      },
+      {
+        "type": "css-contains",
+        "target": "transition",
+        "description": "Add transition property"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-9",
+    "title": "Responsive Design & Media Queries",
+    "description": "Make your website mobile-friendly",
+    "difficulty": "intermediate",
+    "instructions": "Use media queries to change layout on different screen sizes.",
+    "tags": [
+      "css",
+      "responsive"
+    ],
+    "starterCode": {
+      "html": "<div class=\"container\">\n  <div class=\"box\">Box 1</div>\n  <div class=\"box\">Box 2</div>\n  <div class=\"box\">Box 3</div>\n</div>",
+      "css": ".container { display: flex; gap: 20px; }\n.box { flex: 1; background: #3498db; color: white; padding: 40px; }\n\n@media (max-width: 768px) {\n  .container { flex-direction: column; }\n  .box { margin-bottom: 10px; }\n}",
+      "javascript": "console.log('Window width:', window.innerWidth);"
+    },
+    "tasks": [
+      {
+        "type": "css-contains",
+        "target": "@media",
+        "description": "Create media query"
+      },
+      {
+        "type": "css-contains",
+        "target": "flex-direction",
+        "description": "Use flex-direction property"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-10",
+    "title": "JavaScript Variables & Data Types",
+    "description": "Learn about let, const, and data types",
+    "difficulty": "beginner",
+    "instructions": "Explore strings, numbers, booleans, arrays, and objects in JavaScript.",
+    "tags": [
+      "javascript",
+      "basics"
+    ],
+    "starterCode": {
+      "html": "<h1>Check the Console!</h1>\n<p id=\"output\"></p>",
+      "css": "body { font-family: monospace; padding: 20px; }",
+      "javascript": "// Variables\nconst name = 'John';\nlet age = 25;\nconst isStudent = true;\n\n// Array\nconst colors = ['red', 'green', 'blue'];\n\n// Object\nconst person = { name: 'Alice', age: 30 };\n\nconsole.log('Name:', name);\nconsole.log('Age:', age);\nconsole.log('Colors:', colors);\nconsole.log('Person:', person);\n\ndocument.getElementById('output').textContent = `Hello, ${name}!`;"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "const",
+        "description": "Declare constant variables"
+      },
+      {
+        "type": "js-contains",
+        "target": "let",
+        "description": "Use let keyword"
+      },
+      {
+        "type": "js-contains",
+        "target": "console.log",
+        "description": "Use console.log"
+      },
+      {
+        "type": "js-contains",
+        "target": "[",
+        "description": "Create arrays"
+      }
+    ]
+  },
+  {
+    "id": "lesson-11",
+    "title": "JavaScript Functions",
+    "description": "Create reusable code with functions",
+    "difficulty": "beginner",
+    "instructions": "Write functions with parameters and return values. Try arrow functions too!",
+    "tags": [
+      "javascript",
+      "functions"
+    ],
+    "starterCode": {
+      "html": "<button id=\"btn\">Calculate</button>\n<p id=\"result\"></p>",
+      "css": "button { padding: 10px 20px; font-size: 16px; }",
+      "javascript": "// Regular function\nfunction add(a, b) {\n  return a + b;\n}\n\n// Arrow function\nconst multiply = (a, b) => a * b;\n\ndocument.getElementById('btn').addEventListener('click', () => {\n  const sum = add(5, 3);\n  const product = multiply(4, 6);\n  document.getElementById('result').textContent = `Sum: ${sum}, Product: ${product}`;\n  console.log('Sum:', sum, 'Product:', product);\n});"
+    },
+    "tasks": [
+      {
+        "type": "function-exists",
+        "target": "add",
+        "description": "Create an add function"
+      },
+      {
+        "type": "js-contains",
+        "target": "=>",
+        "description": "Use arrow function"
+      },
+      {
+        "type": "js-contains",
+        "target": "return",
+        "description": "Return value from function"
+      },
+      {
+        "type": "js-contains",
+        "target": "addEventListener",
+        "description": "Add event listener"
+      }
+    ]
+  },
+  {
+    "id": "lesson-12",
+    "title": "JavaScript Conditionals",
+    "description": "Control program flow with if/else statements",
+    "difficulty": "beginner",
+    "instructions": "Use if, else if, and else to make decisions based on conditions.",
+    "tags": [
+      "javascript",
+      "control-flow"
+    ],
+    "starterCode": {
+      "html": "<input type=\"number\" id=\"age\" placeholder=\"Enter age\">\n<button id=\"check\">Check</button>\n<p id=\"result\"></p>",
+      "css": "input { padding: 8px; font-size: 16px; }\nbutton { padding: 8px 16px; margin-left: 10px; }",
+      "javascript": "document.getElementById('check').addEventListener('click', () => {\n  const age = parseInt(document.getElementById('age').value);\n  let message;\n  \n  if (age < 13) {\n    message = 'You are a child';\n  } else if (age < 20) {\n    message = 'You are a teenager';\n  } else if (age < 65) {\n    message = 'You are an adult';\n  } else {\n    message = 'You are a senior';\n  }\n  \n  document.getElementById('result').textContent = message;\n  console.log(message);\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "if",
+        "description": "Use if statement"
+      },
+      {
+        "type": "js-contains",
+        "target": "else",
+        "description": "Use else clause"
+      },
+      {
+        "type": "js-contains",
+        "target": "parseInt",
+        "description": "Convert string to number"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-13",
+    "title": "JavaScript Loops",
+    "description": "Iterate with for, while, and forEach",
+    "difficulty": "beginner",
+    "instructions": "Use different types of loops to iterate over arrays and create repeated elements.",
+    "tags": [
+      "javascript",
+      "loops"
+    ],
+    "starterCode": {
+      "html": "<button id=\"generate\">Generate List</button>\n<ul id=\"list\"></ul>",
+      "css": "button { padding: 10px 20px; margin-bottom: 20px; }",
+      "javascript": "document.getElementById('generate').addEventListener('click', () => {\n  const fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Grape'];\n  const list = document.getElementById('list');\n  list.innerHTML = '';\n  \n  // Using forEach\n  fruits.forEach((fruit, index) => {\n    const li = document.createElement('li');\n    li.textContent = `${index + 1}. ${fruit}`;\n    list.appendChild(li);\n    console.log(fruit);\n  });\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "forEach",
+        "description": "Use forEach loop"
+      },
+      {
+        "type": "js-contains",
+        "target": "createElement",
+        "description": "Create elements dynamically"
+      },
+      {
+        "type": "js-contains",
+        "target": "appendChild",
+        "description": "Append elements to DOM"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-14",
+    "title": "JavaScript Arrays Methods",
+    "description": "Master array manipulation with map, filter, reduce",
+    "difficulty": "intermediate",
+    "instructions": "Use modern array methods to transform and filter data.",
+    "tags": [
+      "javascript",
+      "arrays"
+    ],
+    "starterCode": {
+      "html": "<button id=\"process\">Process Data</button>\n<div id=\"output\"></div>",
+      "css": "#output { margin-top: 20px; font-family: monospace; white-space: pre; }",
+      "javascript": "document.getElementById('process').addEventListener('click', () => {\n  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\n  \n  // Map: double each number\n  const doubled = numbers.map(n => n * 2);\n  \n  // Filter: only even numbers\n  const evens = numbers.filter(n => n % 2 === 0);\n  \n  // Reduce: sum all numbers\n  const sum = numbers.reduce((acc, n) => acc + n, 0);\n  \n  document.getElementById('output').textContent = \n    `Doubled: ${doubled}\\nEvens: ${evens}\\nSum: ${sum}`;\n  \n  console.log('Doubled:', doubled);\n  console.log('Evens:', evens);\n  console.log('Sum:', sum);\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "map",
+        "description": "Use map method"
+      },
+      {
+        "type": "js-contains",
+        "target": "filter",
+        "description": "Use filter method"
+      },
+      {
+        "type": "js-contains",
+        "target": "reduce",
+        "description": "Use reduce method"
+      },
+      {
+        "type": "js-contains",
+        "target": "console.log",
+        "description": "Log results"
+      }
+    ]
+  },
+  {
+    "id": "lesson-15",
+    "title": "DOM Manipulation Advanced",
+    "description": "Create, modify, and remove DOM elements dynamically",
+    "difficulty": "intermediate",
+    "instructions": "Use createElement, appendChild, and remove to manipulate the DOM.",
+    "tags": [
+      "javascript",
+      "dom"
+    ],
+    "starterCode": {
+      "html": "<input type=\"text\" id=\"taskInput\" placeholder=\"Enter task\">\n<button id=\"addBtn\">Add Task</button>\n<ul id=\"taskList\"></ul>",
+      "css": "ul { list-style: none; padding: 0; }\nli { background: #f0f0f0; padding: 10px; margin: 5px 0; display: flex; justify-content: space-between; }\nbutton.delete { background: red; color: white; border: none; padding: 5px 10px; cursor: pointer; }",
+      "javascript": "document.getElementById('addBtn').addEventListener('click', () => {\n  const input = document.getElementById('taskInput');\n  const task = input.value.trim();\n  \n  if (task) {\n    const li = document.createElement('li');\n    li.textContent = task;\n    \n    const deleteBtn = document.createElement('button');\n    deleteBtn.textContent = 'Delete';\n    deleteBtn.className = 'delete';\n    deleteBtn.onclick = () => li.remove();\n    \n    li.appendChild(deleteBtn);\n    document.getElementById('taskList').appendChild(li);\n    input.value = '';\n  }\n});"
+    },
+    "tasks": [
+      {
+        "type": "function-exists",
+        "target": "addEventListener",
+        "description": "Add event listener"
+      },
+      {
+        "type": "js-contains",
+        "target": "createElement",
+        "description": "Create DOM elements"
+      },
+      {
+        "type": "js-contains",
+        "target": "appendChild",
+        "description": "Add elements to DOM"
+      },
+      {
+        "type": "js-contains",
+        "target": "remove",
+        "description": "Remove elements"
+      }
+    ]
+  },
+  {
+    "id": "lesson-16",
+    "title": "Event Handling",
+    "description": "Handle clicks, keyboard, and form events",
+    "difficulty": "intermediate",
+    "instructions": "Listen to different event types and respond accordingly.",
+    "tags": [
+      "javascript",
+      "events"
+    ],
+    "starterCode": {
+      "html": "<input type=\"text\" id=\"input\" placeholder=\"Type something\">\n<button id=\"btn\">Click Me</button>\n<div id=\"log\"></div>",
+      "css": "#log { margin-top: 20px; font-family: monospace; font-size: 12px; }",
+      "javascript": "const log = document.getElementById('log');\n\ndocument.getElementById('input').addEventListener('keydown', (e) => {\n  log.innerHTML += `Key: ${e.key}<br>`;\n});\n\ndocument.getElementById('btn').addEventListener('click', () => {\n  log.innerHTML += 'Button clicked!<br>';\n});\n\ndocument.getElementById('btn').addEventListener('dblclick', () => {\n  log.innerHTML += 'Button double-clicked!<br>';\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "addEventListener",
+        "description": "Add event listeners"
+      },
+      {
+        "type": "js-contains",
+        "target": "keydown",
+        "description": "Handle keyboard events"
+      },
+      {
+        "type": "js-contains",
+        "target": "click",
+        "description": "Handle click events"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-17",
+    "title": "JavaScript Objects & This",
+    "description": "Work with objects and understand 'this' keyword",
+    "difficulty": "intermediate",
+    "instructions": "Create objects with methods and understand context binding.",
+    "tags": [
+      "javascript",
+      "objects"
+    ],
+    "starterCode": {
+      "html": "<button id=\"test\">Test Objects</button>\n<div id=\"output\"></div>",
+      "css": "#output { margin-top: 20px; font-family: monospace; }",
+      "javascript": "const person = {\n  name: 'Alice',\n  age: 30,\n  greet() {\n    return `Hello, I'm ${this.name} and I'm ${this.age} years old`;\n  },\n  haveBirthday() {\n    this.age++;\n    return `Happy birthday! Now I'm ${this.age}`;\n  }\n};\n\ndocument.getElementById('test').addEventListener('click', () => {\n  const greeting = person.greet();\n  const birthday = person.haveBirthday();\n  document.getElementById('output').innerHTML = `${greeting}<br>${birthday}`;\n  console.log(person);\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "this.",
+        "description": "Use this keyword"
+      },
+      {
+        "type": "js-contains",
+        "target": "{",
+        "description": "Create object literal"
+      },
+      {
+        "type": "function-exists",
+        "target": "greet",
+        "description": "Create object method"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-18",
+    "title": "ES6 Destructuring & Spread",
+    "description": "Modern JavaScript syntax shortcuts",
+    "difficulty": "intermediate",
+    "instructions": "Use destructuring and spread operator to work with arrays and objects.",
+    "tags": [
+      "javascript",
+      "es6"
+    ],
+    "starterCode": {
+      "html": "<button id=\"demo\">Show ES6 Features</button>\n<pre id=\"output\"></pre>",
+      "css": "pre { background: #f0f0f0; padding: 15px; margin-top: 20px; }",
+      "javascript": "document.getElementById('demo').addEventListener('click', () => {\n  // Destructuring\n  const user = { name: 'John', age: 25, city: 'NYC' };\n  const { name, age } = user;\n  \n  const colors = ['red', 'green', 'blue'];\n  const [first, second] = colors;\n  \n  // Spread operator\n  const moreColors = [...colors, 'yellow', 'purple'];\n  const userCopy = { ...user, country: 'USA' };\n  \n  document.getElementById('output').textContent = \n    `Name: ${name}\\nFirst color: ${first}\\nMore colors: ${moreColors}\\nUser: ${JSON.stringify(userCopy, null, 2)}`;\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "const {",
+        "description": "Use destructuring"
+      },
+      {
+        "type": "js-contains",
+        "target": "...",
+        "description": "Use spread operator"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-19",
+    "title": "Async JavaScript - Promises",
+    "description": "Handle asynchronous operations with Promises",
+    "difficulty": "advanced",
+    "instructions": "Create and chain promises to handle async operations.",
+    "tags": [
+      "javascript",
+      "async"
+    ],
+    "starterCode": {
+      "html": "<button id=\"fetch\">Fetch Data</button>\n<div id=\"status\"></div>",
+      "css": "#status { margin-top: 20px; padding: 15px; background: #f0f0f0; }",
+      "javascript": "function fetchData() {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      const success = Math.random() > 0.3;\n      if (success) {\n        resolve({ id: 1, name: 'Sample Data', value: 42 });\n      } else {\n        reject('Failed to fetch data');\n      }\n    }, 1500);\n  });\n}\n\ndocument.getElementById('fetch').addEventListener('click', () => {\n  document.getElementById('status').textContent = 'Loading...';\n  \n  fetchData()\n    .then(data => {\n      document.getElementById('status').textContent = `Success: ${JSON.stringify(data)}`;\n      console.log('Data:', data);\n    })\n    .catch(error => {\n      document.getElementById('status').textContent = `Error: ${error}`;\n      console.error(error);\n    });\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "Promise",
+        "description": "Create a Promise"
+      },
+      {
+        "type": "js-contains",
+        "target": ".then",
+        "description": "Use .then() method"
+      },
+      {
+        "type": "js-contains",
+        "target": ".catch",
+        "description": "Use .catch() method"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-20",
+    "title": "Async/Await",
+    "description": "Simplified async code with async/await",
+    "difficulty": "advanced",
+    "instructions": "Use async/await to write cleaner asynchronous code.",
+    "tags": [
+      "javascript",
+      "async"
+    ],
+    "starterCode": {
+      "html": "<button id=\"load\">Load Data</button>\n<div id=\"result\"></div>",
+      "css": "#result { margin-top: 20px; padding: 15px; background: #e8f5e9; }",
+      "javascript": "async function loadUserData() {\n  document.getElementById('result').textContent = 'Loading...';\n  \n  await new Promise(resolve => setTimeout(resolve, 1000));\n  \n  return { name: 'Jane', email: 'jane@example.com', posts: 42 };\n}\n\ndocument.getElementById('load').addEventListener('click', async () => {\n  try {\n    const user = await loadUserData();\n    document.getElementById('result').textContent = \n      `User: ${user.name}\\nEmail: ${user.email}\\nPosts: ${user.posts}`;\n    console.log('User loaded:', user);\n  } catch (error) {\n    document.getElementById('result').textContent = `Error: ${error}`;\n    console.error(error);\n  }\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "async",
+        "description": "Use async keyword"
+      },
+      {
+        "type": "js-contains",
+        "target": "await",
+        "description": "Use await keyword"
+      },
+      {
+        "type": "js-contains",
+        "target": "try",
+        "description": "Use try-catch block"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-21",
+    "title": "LocalStorage & SessionStorage",
+    "description": "Store data in the browser",
+    "difficulty": "intermediate",
+    "instructions": "Save and retrieve data using browser storage APIs.",
+    "tags": [
+      "javascript",
+      "storage"
+    ],
+    "starterCode": {
+      "html": "<input type=\"text\" id=\"input\" placeholder=\"Enter your name\">\n<button id=\"save\">Save</button>\n<button id=\"load\">Load</button>\n<button id=\"clear\">Clear</button>\n<p id=\"output\"></p>",
+      "css": "button { margin: 5px; padding: 8px 16px; }",
+      "javascript": "document.getElementById('save').addEventListener('click', () => {\n  const name = document.getElementById('input').value;\n  localStorage.setItem('userName', name);\n  console.log('Saved:', name);\n  document.getElementById('output').textContent = 'Data saved!';\n});\n\ndocument.getElementById('load').addEventListener('click', () => {\n  const name = localStorage.getItem('userName');\n  document.getElementById('output').textContent = name ? `Loaded: ${name}` : 'No data found';\n  console.log('Loaded:', name);\n});\n\ndocument.getElementById('clear').addEventListener('click', () => {\n  localStorage.removeItem('userName');\n  document.getElementById('output').textContent = 'Data cleared!';\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "localStorage",
+        "description": "Use localStorage API"
+      },
+      {
+        "type": "js-contains",
+        "target": "setItem",
+        "description": "Save data with setItem"
+      },
+      {
+        "type": "js-contains",
+        "target": "getItem",
+        "description": "Retrieve data with getItem"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-22",
+    "title": "Form Validation",
+    "description": "Validate user input in forms",
+    "difficulty": "intermediate",
+    "instructions": "Check form inputs and display error messages for invalid data.",
+    "tags": [
+      "javascript",
+      "validation"
+    ],
+    "starterCode": {
+      "html": "<form id=\"form\">\n  <input type=\"text\" id=\"username\" placeholder=\"Username (min 3 chars)\">\n  <input type=\"email\" id=\"email\" placeholder=\"Email\">\n  <input type=\"password\" id=\"password\" placeholder=\"Password (min 6 chars)\">\n  <button type=\"submit\">Submit</button>\n  <div id=\"errors\"></div>\n</form>",
+      "css": "form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }\n#errors { color: red; margin-top: 10px; }",
+      "javascript": "document.getElementById('form').addEventListener('submit', (e) => {\n  e.preventDefault();\n  const errors = [];\n  \n  const username = document.getElementById('username').value;\n  const email = document.getElementById('email').value;\n  const password = document.getElementById('password').value;\n  \n  if (username.length < 3) errors.push('Username too short');\n  if (!email.includes('@')) errors.push('Invalid email');\n  if (password.length < 6) errors.push('Password too short');\n  \n  document.getElementById('errors').innerHTML = errors.join('<br>');\n  if (errors.length === 0) alert('Form submitted!');\n});"
+    },
+    "tasks": [
+      {
+        "type": "function-exists",
+        "target": "addEventListener",
+        "description": "Add form event"
+      },
+      {
+        "type": "js-contains",
+        "target": "preventDefault",
+        "description": "Prevent default action"
+      },
+      {
+        "type": "js-contains",
+        "target": ".value",
+        "description": "Get input values"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-23",
+    "title": "Timers & Intervals",
+    "description": "Schedule code execution with setTimeout and setInterval",
+    "difficulty": "intermediate",
+    "instructions": "Create timers and repeating intervals for dynamic content.",
+    "tags": [
+      "javascript",
+      "timing"
+    ],
+    "starterCode": {
+      "html": "<h1 id=\"clock\">00:00:00</h1>\n<button id=\"start\">Start</button>\n<button id=\"stop\">Stop</button>\n<button id=\"reset\">Reset</button>",
+      "css": "#clock { font-size: 48px; font-family: monospace; }",
+      "javascript": "let seconds = 0;\nlet interval = null;\n\nfunction updateClock() {\n  const h = Math.floor(seconds / 3600).toString().padStart(2, '0');\n  const m = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');\n  const s = (seconds % 60).toString().padStart(2, '0');\n  document.getElementById('clock').textContent = `${h}:${m}:${s}`;\n}\n\ndocument.getElementById('start').addEventListener('click', () => {\n  if (!interval) interval = setInterval(() => { seconds++; updateClock(); }, 1000);\n});\n\ndocument.getElementById('stop').addEventListener('click', () => {\n  clearInterval(interval);\n  interval = null;\n});\n\ndocument.getElementById('reset').addEventListener('click', () => {\n  seconds = 0;\n  updateClock();\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "setInterval",
+        "description": "Use setInterval"
+      },
+      {
+        "type": "js-contains",
+        "target": "setTimeout",
+        "description": "Use setTimeout"
+      },
+      {
+        "type": "js-contains",
+        "target": "clearInterval",
+        "description": "Clear interval"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-24",
+    "title": "JavaScript Classes",
+    "description": "Object-oriented programming with classes",
+    "difficulty": "advanced",
+    "instructions": "Create classes with constructors, methods, and inheritance.",
+    "tags": [
+      "javascript",
+      "oop"
+    ],
+    "starterCode": {
+      "html": "<button id=\"test\">Create Animals</button>\n<div id=\"output\"></div>",
+      "css": "#output { margin-top: 20px; font-family: monospace; }",
+      "javascript": "class Animal {\n  constructor(name, sound) {\n    this.name = name;\n    this.sound = sound;\n  }\n  \n  speak() {\n    return `${this.name} says ${this.sound}`;\n  }\n}\n\nclass Dog extends Animal {\n  constructor(name) {\n    super(name, 'Woof!');\n  }\n  \n  fetch() {\n    return `${this.name} is fetching the ball`;\n  }\n}\n\ndocument.getElementById('test').addEventListener('click', () => {\n  const dog = new Dog('Buddy');\n  const cat = new Animal('Whiskers', 'Meow!');\n  \n  document.getElementById('output').innerHTML = \n    `${dog.speak()}<br>${dog.fetch()}<br>${cat.speak()}`;\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "class",
+        "description": "Create a class"
+      },
+      {
+        "type": "js-contains",
+        "target": "constructor",
+        "description": "Define constructor"
+      },
+      {
+        "type": "js-contains",
+        "target": "extends",
+        "description": "Use inheritance"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-25",
+    "title": "JSON & Data Parsing",
+    "description": "Work with JSON data format",
+    "difficulty": "intermediate",
+    "instructions": "Parse JSON strings and stringify JavaScript objects.",
+    "tags": [
+      "javascript",
+      "json"
+    ],
+    "starterCode": {
+      "html": "<button id=\"parse\">Parse JSON</button>\n<button id=\"stringify\">Stringify Object</button>\n<pre id=\"output\"></pre>",
+      "css": "pre { background: #f5f5f5; padding: 15px; margin-top: 20px; }",
+      "javascript": "document.getElementById('parse').addEventListener('click', () => {\n  const jsonString = '{\"name\":\"John\",\"age\":30,\"skills\":[\"JS\",\"CSS\",\"HTML\"]}';\n  const obj = JSON.parse(jsonString);\n  document.getElementById('output').textContent = \n    `Parsed Object:\\n${JSON.stringify(obj, null, 2)}`;\n  console.log('Parsed:', obj);\n});\n\ndocument.getElementById('stringify').addEventListener('click', () => {\n  const user = {\n    name: 'Alice',\n    age: 25,\n    hobbies: ['reading', 'coding', 'gaming']\n  };\n  const json = JSON.stringify(user, null, 2);\n  document.getElementById('output').textContent = `JSON String:\\n${json}`;\n  console.log('Stringified:', json);\n});"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "JSON.parse",
+        "description": "Parse JSON"
+      },
+      {
+        "type": "js-contains",
+        "target": "JSON.stringify",
+        "description": "Stringify object"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-26",
+    "title": "React Vite - Project Setup",
+    "description": "Set up a React project with Vite build tool",
+    "difficulty": "intermediate",
+    "instructions": "Learn how to create a React Vite project, understand the project structure, and run the development server.",
+    "tags": [
+      "react",
+      "vite",
+      "setup"
+    ],
+    "starterCode": {
+      "html": "<div id=\"info\">\n  <h2>React Vite Setup</h2>\n  <pre id=\"output\"></pre>\n</div>",
+      "css": "body { font-family: 'Courier New', monospace; background: #1e1e1e; color: #d4d4d4; padding: 20px; }\n#info { background: #252526; padding: 20px; border-radius: 8px; }\npre { background: #1e1e1e; padding: 15px; border-left: 4px solid #007acc; overflow-x: auto; }",
+      "javascript": "const setupSteps = `React Vite Project Setup:\n\n1. Create new project:\n   npm create vite@latest my-app -- --template react\n\n2. Navigate to project:\n   cd my-app\n\n3. Install dependencies:\n   npm install\n\n4. Start dev server:\n   npm run dev\n\n5. Build for production:\n   npm run build\n\nProject Structure:\n- src/ (source files)\n- public/ (static assets)\n- package.json (dependencies)\n- vite.config.js (Vite configuration)`;\n\ndocument.getElementById('output').textContent = setupSteps;\nconsole.log('React Vite setup explained');"
+    },
+    "tasks": [
+      {
+        "type": "html-contains",
+        "target": "React",
+        "description": "Reference React"
+      },
+      {
+        "type": "html-contains",
+        "target": "npm",
+        "description": "Understand npm"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-27",
+    "title": "React Basics - Components & JSX",
+    "description": "Create functional React components using JSX syntax",
+    "difficulty": "intermediate",
+    "instructions": "Build a simple React component that displays data and handles basic rendering.",
+    "tags": [
+      "react",
+      "components",
+      "jsx"
+    ],
+    "starterCode": {
+      "html": "<div id=\"root\">\n  <div id=\"app\"></div>\n</div>",
+      "css": "body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }\n.card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 400px; margin: 10px 0; }\n.header { color: #333; margin-bottom: 10px; }\n.content { color: #666; line-height: 1.6; }",
+      "javascript": "// Simple React Component Example\nconst Greeting = ({ name, age }) => {\n  return `\n    <div class=\"card\">\n      <div class=\"header\"><h3>Hello, ${name}!</h3></div>\n      <div class=\"content\">\n        <p>Age: ${age} years old</p>\n        <p>Welcome to React with Vite!</p>\n      </div>\n    </div>\n  `;\n};\n\n// Render component\nconst app = document.getElementById('app');\napp.innerHTML = Greeting({ name: 'React Developer', age: 25 });\n\nconsole.log('React component rendered!');"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "function",
+        "description": "Create a function"
+      },
+      {
+        "type": "js-contains",
+        "target": "return",
+        "description": "Return value"
+      },
+      {
+        "type": "tag-exists",
+        "target": "div",
+        "description": "Create HTML"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-28",
+    "title": "React State & Hooks",
+    "description": "Manage component state with useState hook",
+    "difficulty": "intermediate",
+    "instructions": "Create a counter component using React hooks to manage and update state.",
+    "tags": [
+      "react",
+      "hooks",
+      "state"
+    ],
+    "starterCode": {
+      "html": "<div id=\"counter-app\"></div>",
+      "css": ".counter-container { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 12px; max-width: 300px; text-align: center; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.2); margin: 20px auto; }\n.count-display { font-size: 48px; font-weight: bold; margin: 20px 0; }\n.button-group { display: flex; gap: 10px; justify-content: center; }\nbutton { padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background: white; color: #667eea; font-weight: bold; cursor: pointer; transition: transform 0.2s; }\nbutton:hover { transform: scale(1.05); }",
+      "javascript": "// Counter Component using State Pattern\nlet count = 0;\n\nconst renderCounter = () => {\n  document.getElementById('counter-app').innerHTML = `\n    <div class=\"counter-container\">\n      <h2>Counter App</h2>\n      <div class=\"count-display\">${count}</div>\n      <div class=\"button-group\">\n        <button onclick=\"increment()\">+ Increment</button>\n        <button onclick=\"decrement()\">- Decrement</button>\n        <button onclick=\"reset()\">Reset</button>\n      </div>\n    </div>\n  `;\n};\n\nconst increment = () => { count++; renderCounter(); };\nconst decrement = () => { count--; renderCounter(); };\nconst reset = () => { count = 0; renderCounter(); };\n\nrenderCounter();\nconsole.log('State management example loaded');"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "let",
+        "description": "Create variable"
+      },
+      {
+        "type": "function-exists",
+        "target": "renderCounter",
+        "description": "Render function"
+      },
+      {
+        "type": "js-contains",
+        "target": "addEventListener",
+        "description": "Add listeners"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-29",
+    "title": "React Props & Component Communication",
+    "description": "Pass data between components using props",
+    "difficulty": "intermediate",
+    "instructions": "Create parent and child components that communicate through props.",
+    "tags": [
+      "react",
+      "props",
+      "communication"
+    ],
+    "starterCode": {
+      "html": "<div id=\"props-demo\"></div>",
+      "css": ".container { max-width: 500px; margin: 20px auto; font-family: Arial, sans-serif; }\n.parent { background: #3498db; padding: 20px; border-radius: 8px; color: white; margin-bottom: 10px; }\n.child { background: #2ecc71; padding: 15px; margin: 10px 0; border-radius: 6px; color: white; }\n.info { background: #e74c3c; color: white; padding: 10px; margin: 5px 0; border-radius: 4px; }",
+      "javascript": "// Component that receives props\nconst UserCard = (props) => {\n  return `\n    <div class=\"child\">\n      <h4>${props.name}</h4>\n      <p>Email: ${props.email}</p>\n      <p>Role: ${props.role}</p>\n    </div>\n  `;\n};\n\n// Parent Component\nconst UserList = () => {\n  const users = [\n    { name: 'Alice Johnson', email: 'alice@example.com', role: 'Developer' },\n    { name: 'Bob Smith', email: 'bob@example.com', role: 'Designer' },\n    { name: 'Carol White', email: 'carol@example.com', role: 'Manager' }\n  ];\n  \n  return `\n    <div class=\"container\">\n      <div class=\"parent\">\n        <h2>User Management System</h2>\n        <p>This demonstrates parent-child component communication</p>\n      </div>\n      ${users.map(user => UserCard(user)).join('')}\n    </div>\n  `;\n};\n\ndocument.getElementById('props-demo').innerHTML = UserList();\nconsole.log('Props demonstration complete');"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": ".map",
+        "description": "Use map function"
+      },
+      {
+        "type": "js-contains",
+        "target": "function",
+        "description": "Create functions"
+      },
+      {
+        "type": "js-contains",
+        "target": "innerHTML",
+        "description": "Render components"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  },
+  {
+    "id": "lesson-30",
+    "title": "React Effects & Lifecycle",
+    "description": "Handle side effects and component lifecycle",
+    "difficulty": "advanced",
+    "instructions": "Understand useEffect hook for managing component lifecycle and side effects.",
+    "tags": [
+      "react",
+      "effects",
+      "lifecycle"
+    ],
+    "starterCode": {
+      "html": "<div id=\"lifecycle-demo\"></div>",
+      "css": ".lifecycle-container { max-width: 600px; margin: 20px auto; font-family: Arial, sans-serif; }\n.lifecycle-section { background: #ecf0f1; padding: 20px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #3498db; }\n.lifecycle-section h3 { color: #2c3e50; margin-top: 0; }\n.code-block { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 4px; overflow-x: auto; font-family: monospace; font-size: 12px; margin: 10px 0; }\n.event-log { background: #fff; border: 2px solid #3498db; border-radius: 4px; padding: 15px; margin: 10px 0; max-height: 200px; overflow-y: auto; }\n.event-item { padding: 5px 0; border-bottom: 1px solid #ecf0f1; }\n.event-item:last-child { border-bottom: none; }",
+      "javascript": "const lifecycleExplanation = `\nReact Component Lifecycle:\n\n1. MOUNTING (Creation phase)\n   - Component is created and inserted into DOM\n   - Constructor runs (in class components)\n   - useEffect with empty dependency array runs\n\n2. UPDATING (Update phase)\n   - Props or state change\n   - Component re-renders\n   - useEffect with dependencies runs\n\n3. UNMOUNTING (Cleanup phase)\n   - Component is removed from DOM\n   - Cleanup functions run\n\nuseEffect Example:\nuseEffect(() => {\n  // This runs after component renders\n  console.log('Component mounted or updated');\n  \n  return () => {\n    // Cleanup function (runs on unmount)\n    console.log('Component unmounting');\n  };\n}, [dependency]); // Dependencies array\n`;\n\nlet renderCount = 0;\nconst eventLog = [];\n\nconst logEvent = (message) => {\n  renderCount++;\n  eventLog.push(`${renderCount}. ${message}`);\n  if (eventLog.length > 5) eventLog.shift();\n};\n\nlogEvent('Component Mounted');\nlogEvent('Effect Hook Registered');\nlogEvent('State Initialized');\n\ndocument.getElementById('lifecycle-demo').innerHTML = `\n  <div class=\"lifecycle-container\">\n    <div class=\"lifecycle-section\">\n      <h3>React Component Lifecycle</h3>\n      <div class=\"code-block\">${lifecycleExplanation.trim()}</div>\n    </div>\n    <div class=\"lifecycle-section\">\n      <h3>Event Log</h3>\n      <div class=\"event-log\">\n        ${eventLog.map(evt => `<div class=\"event-item\">\u2713 ${evt}</div>`).join('')}\n      </div>\n    </div>\n  </div>\n`;\n\nconsole.log('Lifecycle demonstration loaded');"
+    },
+    "tasks": [
+      {
+        "type": "js-contains",
+        "target": "function",
+        "description": "Create functions"
+      },
+      {
+        "type": "js-contains",
+        "target": "useEffect",
+        "description": "Reference useEffect"
+      },
+      {
+        "type": "html-contains",
+        "target": "lifecycle",
+        "description": "Understand lifecycle"
+      },
+      {
+        "type": "no-starter",
+        "description": "Modify the starter code"
+      }
+    ]
+  }
+]
